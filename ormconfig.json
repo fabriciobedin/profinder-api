@@ -5,10 +5,9 @@
   "username": "postgres",
   "password": "docker",
   "database": "agendapro",
-  "migrations": [
-		"./src/database/migrations/*.ts"
-	],
-	"cli": {
-		"migrationsDir": "./src/database/migrations"
-	}
+  "entities": ["./src/models/*.ts"],
+  "migrations": ["./src/database/migrations/*.ts"],
+  "cli": {
+    "migrationsDir": "./src/database/migrations"
+  }
 }

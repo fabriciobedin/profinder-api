@@ -4,5 +4,11 @@
   "port": 5432,
   "username": "postgres",
   "password": "docker",
-  "database": "agendapro"
+  "database": "agendapro",
+  "migrations": [
+		"./src/database/migrations/*.ts"
+	],
+	"cli": {
+		"migrationsDir": "./src/database/migrations"
+	}
 }

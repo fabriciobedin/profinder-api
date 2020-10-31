@@ -30,7 +30,6 @@ class CreateUserService {
     });
 
     await usersRepository.save(user);
-    delete user.password;
     return user;
   }
 }

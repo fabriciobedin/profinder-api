@@ -31,14 +31,20 @@
         "argsIgnorePattern": "^_"
       }
     ],
-    // "@typescript-eslint/naming-convention": [
+    // "@typescript-eslint/interface-name-prefix": [
     //   "error",
     //   {
-    //     "selector": "interface",
-    //     "prefix": ["I"],
-    //     "format": ["PascalCase"]
+    //     "prefixWithI": "always"
     //   }
     // ],
+    "@typescript-eslint/naming-convention": [
+        "error",
+        {
+          "selector": "interface",
+          "prefix": ["I"],
+          "format": ["PascalCase"]
+        }
+      ],
     "class-methods-use-this": "off",
     "import/extensions": [
       "error",

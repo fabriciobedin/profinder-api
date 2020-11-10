@@ -3,11 +3,11 @@ import express, { Request, Response, NextFunction } from 'express';
 import 'express-async-errors';
 import cors from 'cors';
 
-import AppError from './errors/AppError';
+import AppError from './shared/errors/AppError';
 
 import uploadConfig from './config/upload';
-import routes from './routes';
-import './database';
+import routes from './shared/routes';
+import './shared/database';
 
 const app = express();
 app.disable('x-powered-by');

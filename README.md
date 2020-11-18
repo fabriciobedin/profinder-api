@@ -1,4 +1,4 @@
-# AgendaPro
+# ProFinder
 
 ## Commands
 ```sh

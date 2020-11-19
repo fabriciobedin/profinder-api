@@ -4,6 +4,7 @@
 ```sh
 docker run --name profinder_postgres -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
 docker run --name profinder_mongodb -p 27017:27017 -d mongodb
+docker run --name profinder_redis -p 6379:6379 -d redis:alpine
 
 lsof -i :5432               # verify if port is being used
 docker start id_container   # start container

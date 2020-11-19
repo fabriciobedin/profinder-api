@@ -1,4 +1,4 @@
-reseimport { injectable, inject } from 'tsyringe';
+import { injectable, inject } from 'tsyringe';
 import path from 'path';
 
 import AppError from '@shared/errors/AppError';

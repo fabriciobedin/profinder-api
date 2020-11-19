@@ -28,12 +28,12 @@ describe('SendForgotPasswordEmail', () => {
 
     await fakeUsersRepository.create({
       name: 'Fabricio Bedin',
-      email: 'fabriciobedin@hotmail.com',
+      email: 'fabricioobedin@gmail.com',
       password: '123456'
     });
 
     await sendForgotPasswordEmail.execute({
-      email: 'fabriciobedin@hotmail.com'
+      email: 'fabricioobedin@gmail.com'
     });
 
     expect(sendMail).toHaveBeenCalled();
@@ -42,7 +42,7 @@ describe('SendForgotPasswordEmail', () => {
   it('should not be able to recover a non-existing user account', async () => {
     await expect(
       sendForgotPasswordEmail.execute({
-        email: 'fabriciobedin@hotmail.com'
+        email: 'fabricioobedin@gmail.com'
       })
     ).rejects.toBeInstanceOf(AppError);
   });
@@ -52,12 +52,12 @@ describe('SendForgotPasswordEmail', () => {
 
     const user = await fakeUsersRepository.create({
       name: 'Fabricio Bedin',
-      email: 'fabriciobedin@hotmail.com',
+      email: 'fabricioobedin@gmail.com',
       password: '123456'
     });
 
     await sendForgotPasswordEmail.execute({
-      email: 'fabriciobedin@hotmail.com'
+      email: 'fabricioobedin@gmail.com'
     });
 
     expect(generateToken).toHaveBeenCalledWith(user.id);

@@ -19,7 +19,7 @@ describe('CreateUser', () => {
   it('should be able to create a new user', async () => {
     const user = await createUser.execute({
       name: 'Fabricio Bedin',
-      email: 'fabriciobedin@hotmail.com',
+      email: 'fabricioobedin@gmail.com',
       password: '123456'
     });
 
@@ -29,14 +29,14 @@ describe('CreateUser', () => {
   it('should not be able to create a new user with an email already in use', async () => {
     await createUser.execute({
       name: 'Fabricio Bedin',
-      email: 'fabriciobedin@hotmail.com',
+      email: 'fabricioobedin@gmail.com',
       password: '123456'
     });
 
     await expect(
       createUser.execute({
         name: 'Fabricio Bedin',
-        email: 'fabriciobedin@hotmail.com',
+        email: 'fabricioobedin@gmail.com',
         password: '123456'
       })
     ).rejects.toBeInstanceOf(AppError);

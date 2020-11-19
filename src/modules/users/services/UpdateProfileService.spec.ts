@@ -22,7 +22,7 @@ describe('UpdateProfile', () => {
   it('should be able update the profile', async () => {
     const user = await fakeUsersRepository.create({
       name: 'Fabricio Bedin',
-      email: 'fabriciobedin@hotmail.com',
+      email: 'fabricioobedin@gmail.com',
       password: '123456'
     });
 
@@ -49,7 +49,7 @@ describe('UpdateProfile', () => {
   it('should not be able to change to another user email', async () => {
     await fakeUsersRepository.create({
       name: 'Fabricio Bedin',
-      email: 'fabriciobedin@hotmail.com',
+      email: 'fabricioobedin@gmail.com',
       password: '123456'
     });
 
@@ -63,7 +63,7 @@ describe('UpdateProfile', () => {
       updateProfile.execute({
         user_id: user.id,
         name: 'Fabricio Bedin',
-        email: 'fabriciobedin@hotmail.com'
+        email: 'fabricioobedin@gmail.com'
       })
     ).rejects.toBeInstanceOf(AppError);
   });
@@ -71,7 +71,7 @@ describe('UpdateProfile', () => {
   it('should be able to update the password', async () => {
     const user = await fakeUsersRepository.create({
       name: 'Fabricio Bedin',
-      email: 'fabriciobedin@hotmail.com',
+      email: 'fabricioobedin@gmail.com',
       password: '123456'
     });
 
@@ -89,7 +89,7 @@ describe('UpdateProfile', () => {
   it('should not be able to update the password without old password', async () => {
     const user = await fakeUsersRepository.create({
       name: 'Fabricio Bedin',
-      email: 'fabriciobedin@hotmail.com',
+      email: 'fabricioobedin@gmail.com',
       password: '123456'
     });
 
@@ -106,7 +106,7 @@ describe('UpdateProfile', () => {
   it('should not be able to update the password with wrong old password', async () => {
     const user = await fakeUsersRepository.create({
       name: 'Fabricio Bedin',
-      email: 'fabriciobedin@hotmail.com',
+      email: 'fabricioobedin@gmail.com',
       password: '123456'
     });
 
